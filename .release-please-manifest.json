@@ -2,10 +2,10 @@
   "separate-pull-requests": true,
   "cmd/ncd": {
     "package-name": "ncd",
-    "release-type": "go",
+    "release-type": "go"
   },
   "cmd/module_manager": {
     "package-name": "module_manager",
-    "release-type": "go",
+    "release-type": "go"
   }
 }
