@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.1](https://github.com/d3chapma/release-please-test/compare/ncd-v0.6.0...ncd-v0.6.1) (2023-10-25)
+
+
+### Bug Fixes
+
+* Add version ([7846663](https://github.com/d3chapma/release-please-test/commit/784666391924229c926451dc30daad054c751ddd))
+
 ## [0.6.0](https://github.com/d3chapma/release-please-test/compare/ncd-v0.5.5...ncd-v0.6.0) (2023-10-25)
 
 
