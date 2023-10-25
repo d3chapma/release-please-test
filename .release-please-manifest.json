@@ -1,11 +1,5 @@
 {
-  "separate-pull-requests": true,
-  "cmd/ncd": {
-    "package-name": "ncd",
-    "release-type": "go"
-  },
-  "cmd/module_manager": {
-    "package-name": "module_manager",
-    "release-type": "go"
-  }
+  "cmd/ncd": "0.5.5",
+  "cmd/module_manager": "1.0.0"
 }
+
