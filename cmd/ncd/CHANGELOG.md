@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.3](https://github.com/d3chapma/release-please-test/compare/ncd-v0.6.2...ncd-v0.6.3) (2023-10-26)
+
+
+### Bug Fixes
+
+* Can I get this right? ([4dfc3a4](https://github.com/d3chapma/release-please-test/commit/4dfc3a4c729714dc2bacb36a10a7fc1745c7cf2a))
+
 ## [0.6.2](https://github.com/d3chapma/release-please-test/compare/ncd-v0.6.1...ncd-v0.6.2) (2023-10-26)
 
 
