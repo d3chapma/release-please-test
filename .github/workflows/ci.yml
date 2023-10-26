@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     name: release ncd
     needs: [release-please]
-    if: needs.release-please.outputs.cmd/ncd--release_created
+    if: needs.release-please.outputs['cmd/ncd--release_created']
     steps:
       - uses: actions/checkout@v3
       - uses: wangyoucao577/go-release-action@v1
@@ -41,7 +41,7 @@ jobs:
     runs-on: ubuntu-latest
     name: release module_manager
     needs: [release-please]
-    if: needs.release-please.outputs.cmd/module_manager--release_created
+    if: needs.release-please.outputs['cmd/module_manager--release_created']
     steps:
       - uses: actions/checkout@v3
       - uses: wangyoucao577/go-release-action@v1
