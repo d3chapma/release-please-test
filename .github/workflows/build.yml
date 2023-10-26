@@ -30,7 +30,7 @@ jobs:
           goarm: 7
           ldflags: -w -s
           executable_compression: upx
-          compress_assets: OFF
+          compress_assets: zip
           goversion: 1.21.1
           project_path: ${{ matrix.package }}
           asset_name: ${{ matrix.binary_name }}
