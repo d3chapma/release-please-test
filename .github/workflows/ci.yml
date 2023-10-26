@@ -1,0 +1,58 @@
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+  pull-requests: write
+
+name: CI
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: google-github-actions/release-please-action@v3
+        with:
+          token: ${{ secrets.TOKEN }}
+          command: manifest
+
+  release-ncd-linux-arm:
+    runs-on: ubuntu-latest
+    name: release linux/arm
+    needs: [release-please]
+    if: needs.release-please.outputs['packages/ncd--release_created']
+    steps:
+      - uses: actions/checkout@v3
+      - uses: wangyoucao577/go-release-action@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          goos: linux
+          goarch: arm
+          goarm: 7
+          ldflags: -w -s
+          executable_compression: upx
+          compress_assets: zip
+          goversion: 1.21.1
+          project_path: "./cmd/ncd"
+
+  release-module-manager-linux-arm:
+    runs-on: ubuntu-latest
+    name: release linux/arm
+    needs: [release-please]
+    if: needs.release-please.outputs['packages/module_manager--release_created']
+    steps:
+      - uses: actions/checkout@v3
+      - uses: wangyoucao577/go-release-action@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          goos: linux
+          goarch: arm
+          goarm: 7
+          ldflags: -w -s
+          executable_compression: upx
+          compress_assets: zip
+          goversion: 1.21.1
+          project_path: "./cmd/module_manager"
+          release_tag: ${{ needs.release-please.outputs.tag_name }}
