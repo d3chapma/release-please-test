@@ -13,8 +13,8 @@ jobs:
     name: release linux/arm
     runs-on: ubuntu-latest
     strategy:
-    matrix:
-      package: ["./cmd/ncd", "./cmd/module_manager"]
+      matrix:
+        package: ["./cmd/ncd", "./cmd/module_manager"]
     steps:
       - uses: actions/checkout@v3
       - uses: wangyoucao577/go-release-action@v1
