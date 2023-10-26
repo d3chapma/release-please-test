@@ -6,6 +6,4 @@ import (
 
 func main() {
 	fmt.Println("Hello World from NCD")
-	fmt.Println("Hello World from NCD")
-	fmt.Println("Hello World from NCD")
 }
