@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.0](https://github.com/d3chapma/release-please-test/compare/module_manager-v2.0.3...module_manager-v2.1.0) (2023-10-26)
+
+
+### Features
+
+* good change ([fad0522](https://github.com/d3chapma/release-please-test/commit/fad05222e36a09dd7849334ecf5c2636d754d82f))
+
 ## [2.0.3](https://github.com/d3chapma/release-please-test/compare/module_manager-v2.0.2...module_manager-v2.0.3) (2023-10-26)
 
 
