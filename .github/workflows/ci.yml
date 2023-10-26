@@ -22,20 +22,21 @@ jobs:
     runs-on: ubuntu-latest
     name: release ncd
     needs: [release-prs]
-    if: ${{ needs.release-prs.outputs['cmd/ncd--release_created'] }}
-    steps:
-      - uses: actions/checkout@v3
-      - uses: wangyoucao577/go-release-action@v1
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          goos: linux
-          goarch: arm
-          goarm: 7
-          ldflags: -w -s
-          executable_compression: upx
-          compress_assets: zip
-          goversion: 1.21.1
-          project_path: "./cmd/ncd"
+    run: |
+      echo ${{ needs.release-prs.outputs['cmd/ncd--release_created'] }}
+    # steps:
+    #   - uses: actions/checkout@v3
+    #   - uses: wangyoucao577/go-release-action@v1
+    #     with:
+    #       github_token: ${{ secrets.GITHUB_TOKEN }}
+    #       goos: linux
+    #       goarch: arm
+    #       goarm: 7
+    #       ldflags: -w -s
+    #       executable_compression: upx
+    #       compress_assets: zip
+    #       goversion: 1.21.1
+    #       project_path: "./cmd/ncd"
 
   release-module-manager:
     runs-on: ubuntu-latest
