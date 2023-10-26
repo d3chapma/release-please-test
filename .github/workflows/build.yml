@@ -15,6 +15,11 @@ jobs:
     strategy:
       matrix:
         package: ["./cmd/ncd", "./cmd/module_manager"]
+        include:
+          - package: "./cmd/ncd"
+            binary_name: "ncd"
+          - package: "./cmd/module_manager"
+            binary_name: "module_manager"
     steps:
       - uses: actions/checkout@v3
       - uses: wangyoucao577/go-release-action@v1
@@ -28,3 +33,4 @@ jobs:
           compress_assets: OFF
           goversion: 1.21.1
           project_path: ${{ matrix.package }}
+          asset_name: ${{ matrix.binary_name }}
