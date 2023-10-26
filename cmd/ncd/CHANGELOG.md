@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.8.1](https://github.com/d3chapma/release-please-test/compare/ncd-v0.8.0...ncd-v0.8.1) (2023-10-26)
+
+
+### Bug Fixes
+
+* change to ncd module ([d2c20d6](https://github.com/d3chapma/release-please-test/commit/d2c20d6edb475eb5b651b4f6ea795aaf156e755e))
+
 ## [0.8.0](https://github.com/d3chapma/release-please-test/compare/ncd-v0.7.1...ncd-v0.8.0) (2023-10-26)
 
 
