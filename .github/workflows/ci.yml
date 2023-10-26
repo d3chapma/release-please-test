@@ -10,7 +10,7 @@ permissions:
 name: CI
 
 jobs:
-  release-please:
+  release-prs:
     runs-on: ubuntu-latest
     steps:
       - uses: google-github-actions/release-please-action@v3
@@ -21,8 +21,8 @@ jobs:
   release-ncd:
     runs-on: ubuntu-latest
     name: release ncd
-    needs: [release-please]
-    if: needs.release-please.outputs['cmd/ncd--release_created']
+    needs: [release-prs]
+    if: ${{ needs.release-prs.outputs['cmd/ncd--release_created'] }}
     steps:
       - uses: actions/checkout@v3
       - uses: wangyoucao577/go-release-action@v1
@@ -40,8 +40,8 @@ jobs:
   release-module-manager:
     runs-on: ubuntu-latest
     name: release module_manager
-    needs: [release-please]
-    if: needs.release-please.outputs['cmd/module_manager--release_created']
+    needs: [release-prs]
+    if: ${{ needs.release-prs.outputs['cmd/module_manager--release_created'] }}
     steps:
       - uses: actions/checkout@v3
       - uses: wangyoucao577/go-release-action@v1
@@ -55,4 +55,4 @@ jobs:
           compress_assets: zip
           goversion: 1.21.1
           project_path: "./cmd/module_manager"
-          release_tag: ${{ needs.release-please.outputs.tag_name }}
+          release_tag: ${{ needs.release-prs.outputs.tag_name }}
