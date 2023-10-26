@@ -1,5 +1,5 @@
 {
-  "cmd/ncd": "0.7.1",
+  "cmd/ncd": "0.8.0",
   "cmd/module_manager": "2.0.3"
 }
 
