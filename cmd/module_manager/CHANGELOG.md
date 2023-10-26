@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.2](https://github.com/d3chapma/release-please-test/compare/module_manager-v2.0.1...module_manager-v2.0.2) (2023-10-26)
+
+
+### Bug Fixes
+
+* Trying again ([332f9fb](https://github.com/d3chapma/release-please-test/commit/332f9fb9260d51a3676edbfd702dd267f8382c02))
+
 ## [2.0.1](https://github.com/d3chapma/release-please-test/compare/module_manager-v2.0.0...module_manager-v2.0.1) (2023-10-26)
 
 
