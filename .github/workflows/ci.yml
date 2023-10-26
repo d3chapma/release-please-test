@@ -18,9 +18,9 @@ jobs:
           token: ${{ secrets.TOKEN }}
           command: manifest
 
-  release-ncd-linux-arm:
+  release-ncd:
     runs-on: ubuntu-latest
-    name: release linux/arm
+    name: release ncd
     needs: [release-please]
     if: needs.release-please.outputs['packages/ncd--release_created']
     steps:
@@ -37,9 +37,9 @@ jobs:
           goversion: 1.21.1
           project_path: "./cmd/ncd"
 
-  release-module-manager-linux-arm:
+  release-module-manager:
     runs-on: ubuntu-latest
-    name: release linux/arm
+    name: release module_manager
     needs: [release-please]
     if: needs.release-please.outputs['packages/module_manager--release_created']
     steps:
