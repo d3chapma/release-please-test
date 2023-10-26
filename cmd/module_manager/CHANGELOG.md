@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.0](https://github.com/d3chapma/release-please-test/compare/module_manager-v2.1.0...module_manager-v2.2.0) (2023-10-26)
+
+
+### Features
+
+* New ncd package ([6d78879](https://github.com/d3chapma/release-please-test/commit/6d788790ea844d3a39f636827e9b45e84ae9dc81))
+
 ## [2.1.0](https://github.com/d3chapma/release-please-test/compare/module_manager-v2.0.3...module_manager-v2.1.0) (2023-10-26)
 
 
