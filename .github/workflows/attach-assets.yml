@@ -6,6 +6,8 @@ permissions:
   contents: write
   packages: write
 
+name: attach-assets
+
 jobs:
   release-linux-amd64:
     name: release linux/amd64
