@@ -24,6 +24,7 @@ jobs:
     needs: [release-prs]
     steps:
       - uses: actions/checkout@v3
+      - name: "Set env"
         run: echo ${{ needs.release-prs.outputs['cmd/ncd--release_created'] }}
 
     #   - uses: wangyoucao577/go-release-action@v1
